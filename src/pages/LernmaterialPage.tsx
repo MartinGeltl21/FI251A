@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 interface LernItem {
     icon: string;
     title: string;
@@ -5,6 +7,7 @@ interface LernItem {
     href: string;
     accent: string;
     available: boolean;
+    internal?: boolean;
 }
 
 const lernItems: LernItem[] = [
@@ -36,9 +39,10 @@ const lernItems: LernItem[] = [
         icon: '🗄️',
         title: 'Lernfeld 4',
         description: 'Schutzbedarfsanalyse im eigenen Arbeitsbereich',
-        href: '#',
+        href: '/it-grundschutz',
         accent: '180, 120, 255',
-        available: false,
+        available: true,
+        internal: true,
     },
     {
         icon: '⚙️',
@@ -83,6 +87,8 @@ const lernItems: LernItem[] = [
 ];
 
 export default function LernmaterialPage() {
+    const navigate = useNavigate();
+
     return (
         <div className="lern-page">
             <header className="stundenplan-header">
@@ -96,6 +102,28 @@ export default function LernmaterialPage() {
 
             <div className="lern-grid">
                 {lernItems.map((item, index) => {
+                    if (item.available && item.internal) {
+                        return (
+                            <div
+                                key={item.title}
+                                className="lern-card"
+                                style={{
+                                    '--lern-accent': item.accent,
+                                    animationDelay: `${0.06 * (index + 1)}s`,
+                                    cursor: 'pointer',
+                                } as React.CSSProperties}
+                                onClick={() => navigate(item.href)}
+                            >
+                                <div className="lern-card__glow" />
+                                <div className="lern-card__icon">{item.icon}</div>
+                                <div className="lern-card__content">
+                                    <h3 className="lern-card__title">{item.title}</h3>
+                                    <p className="lern-card__desc">{item.description}</p>
+                                </div>
+                                <div className="lern-card__arrow">→</div>
+                            </div>
+                        );
+                    }
                     const Tag = item.available ? 'a' : 'div';
                     return (
                         <Tag

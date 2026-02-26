@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
-import { quizQuestions, type QuizQuestion } from '../data/quizData';
+import { lf2QuizQuestions, lf4QuizQuestions, type QuizQuestion } from '../data/quizData';
 
 function shuffleArray<T>(array: T[]): T[] {
     const shuffled = [...array];
@@ -14,23 +14,26 @@ type QuizState = 'start' | 'playing' | 'result';
 
 export default function QuizPage() {
     const [state, setState] = useState<QuizState>('start');
+    const [activeTab, setActiveTab] = useState<'lf2' | 'lf4'>('lf2');
     const [questions, setQuestions] = useState<QuizQuestion[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const [score, setScore] = useState(0);
     const [answered, setAnswered] = useState(false);
 
+    const currentQuizData = activeTab === 'lf2' ? lf2QuizQuestions : lf4QuizQuestions;
+
     const startQuiz = useCallback(() => {
-        setQuestions(shuffleArray(quizQuestions));
+        setQuestions(shuffleArray(currentQuizData));
         setCurrentIndex(0);
         setSelectedIndex(null);
         setScore(0);
         setAnswered(false);
         setState('playing');
-    }, []);
+    }, [currentQuizData]);
 
     const currentQuestion = questions[currentIndex];
-    const totalQuestions = quizQuestions.length;
+    const totalQuestions = state === 'start' ? currentQuizData.length : questions.length;
     const progress = state === 'playing' ? ((currentIndex) / totalQuestions) * 100 : 0;
 
     const handleOptionClick = useCallback((optIndex: number) => {
@@ -84,10 +87,27 @@ export default function QuizPage() {
                     <p>Teste dein Wissen mit echten Prüfungsfragen</p>
                 </header>
 
+                <nav className="gs-tabs" style={{ marginBottom: '2rem', justifyContent: 'center' }}>
+                    <button
+                        className={`gs-tab ${activeTab === 'lf2' ? 'gs-tab--active' : ''}`}
+                        onClick={() => setActiveTab('lf2')}
+                    >
+                        <span className="gs-tab__icon">💻</span>
+                        <span className="gs-tab__label">LF2 Quiz</span>
+                    </button>
+                    <button
+                        className={`gs-tab ${activeTab === 'lf4' ? 'gs-tab--active' : ''}`}
+                        onClick={() => setActiveTab('lf4')}
+                    >
+                        <span className="gs-tab__icon">🛡️</span>
+                        <span className="gs-tab__label">LF4 Quiz</span>
+                    </button>
+                </nav>
+
                 <div className="quiz-start-card">
                     <div className="quiz-start-card__glow" />
-                    <div className="quiz-start-icon">📝</div>
-                    <h2 className="quiz-start-title">Prozessortechnik Quiz</h2>
+                    <div className="quiz-start-icon">{activeTab === 'lf2' ? '📝' : '🔒'}</div>
+                    <h2 className="quiz-start-title">{activeTab === 'lf2' ? 'Prozessortechnik Quiz' : 'IT-Grundschutz Quiz'}</h2>
                     <div className="quiz-start-stats">
                         <div className="quiz-stat">
                             <span className="quiz-stat__number">{totalQuestions}</span>
@@ -105,8 +125,17 @@ export default function QuizPage() {
                         </div>
                     </div>
                     <p className="quiz-start-desc">
-                        Alle Fragen wurden exakt so in der Prüfung gestellt.
-                        Die Reihenfolge wird bei jedem Start zufällig gemischt.
+                        {activeTab === 'lf2' ? (
+                            <>
+                                Alle Fragen wurden exakt so in der Prüfung gestellt.
+                                Die Reihenfolge wird bei jedem Start zufällig gemischt.
+                            </>
+                        ) : (
+                            <>
+                                Teste dein Wissen über die Inhalte des IT-Grundschutzes.
+                                Die Reihenfolge wird bei jedem Start zufällig gemischt.
+                            </>
+                        )}
                     </p>
                     <button className="quiz-start-btn" onClick={startQuiz} id="quiz-start-btn">
                         Quiz starten
