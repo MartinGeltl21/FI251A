@@ -60,7 +60,7 @@ export default function HomePage() {
             <header className="home-header">
                 <div className="header-eyebrow">
                     <span className="badge-dot" />
-                    Fachinformatiker 2025
+                    Fachinformatiker 2026
                 </div>
                 <h1>FI251A</h1>
                 <p className="home-subtitle">
