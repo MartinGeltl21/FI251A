@@ -19,6 +19,9 @@ export default function Layout() {
             <main>
                 <Outlet />
             </main>
+            <footer className="site-footer">
+                <p>Impressum / Kontakt: <a href="mailto:martingeltl@proton.me">martingeltl@proton.me</a></p>
+            </footer>
         </div>
     );
 }

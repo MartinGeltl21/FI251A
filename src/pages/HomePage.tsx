@@ -6,7 +6,6 @@ interface NavCard {
     description: string;
     path: string;
     accentColor: string;
-    available: boolean;
 }
 
 const navCards: NavCard[] = [
@@ -16,7 +15,6 @@ const navCards: NavCard[] = [
         description: 'Berufsschul-Turnus mit LK-Übersicht für den aktuellen Block',
         path: '/turnusplan',
         accentColor: '52, 211, 110',
-        available: true,
     },
     {
         icon: '📚',
@@ -24,7 +22,6 @@ const navCards: NavCard[] = [
         description: 'Sammlung von Unterlagen, Zusammenfassungen & Lernzetteln',
         path: '/lernmaterial',
         accentColor: '99, 145, 255',
-        available: false,
     },
     {
         icon: '📝',
@@ -32,7 +29,6 @@ const navCards: NavCard[] = [
         description: 'Interaktive Quizze zum Lernen & Wiederholen',
         path: '/quiz',
         accentColor: '255, 165, 80',
-        available: false,
     },
     {
         icon: '📅',
@@ -40,7 +36,6 @@ const navCards: NavCard[] = [
         description: 'Der aktuelle Stundenplan der Klasse',
         path: '/stundenplan',
         accentColor: '180, 120, 255',
-        available: true,
     },
     {
         icon: '📢',
@@ -48,7 +43,6 @@ const navCards: NavCard[] = [
         description: 'Allgemeine Klassen-Infos & Ankündigungen',
         path: '/infos',
         accentColor: '255, 100, 130',
-        available: false,
     },
 ];
 
@@ -72,7 +66,7 @@ export default function HomePage() {
                 {navCards.map((card, index) => (
                     <button
                         key={card.path}
-                        className={`nav-card ${!card.available ? 'nav-card--coming-soon' : ''}`}
+                        className="nav-card"
                         onClick={() => navigate(card.path)}
                         style={{
                             '--card-accent': card.accentColor,
@@ -86,10 +80,6 @@ export default function HomePage() {
                             <h3 className="nav-card__title">{card.title}</h3>
                             <p className="nav-card__desc">{card.description}</p>
                         </div>
-                        {!card.available && (
-                            <span className="nav-card__badge">Kommt bald</span>
-                        )}
-                        <div className="nav-card__arrow">→</div>
                     </button>
                 ))}
             </div>
