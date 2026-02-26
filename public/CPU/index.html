@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Lernzettel für Prozessortechnik und CPU-Architektur – Fragen und Antworten zum Auswendiglernen.">
+  <title>Lernzettel – Prozessortechnik &amp; CPU-Architektur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-title-group">
+        <h1 class="header-title">Prozessortechnik</h1>
+        <span class="header-subtitle">Lernzettel – Fragen &amp; Antworten</span>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Farbschema wechseln">
+        <span class="toggle-icon sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg></span>
+        <span class="toggle-icon moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== Tab Navigation ========== -->
+  <nav class="tab-nav">
+    <ul class="tab-list">
+      <li><button class="tab-btn active" data-tab="tab-1">Prozessortechnik<span class="tab-badge">3</span></button></li>
+      <li><button class="tab-btn" data-tab="tab-2">Prozessor-Architektur<span class="tab-badge">3</span></button></li>
+      <li><button class="tab-btn" data-tab="tab-3">RISC &amp; CISC<span class="tab-badge">3</span></button></li>
+      <li><button class="tab-btn" data-tab="tab-4">64-Bit-Prozessor<span class="tab-badge">4</span></button></li>
+      <li><button class="tab-btn tab-btn--highlight" data-tab="tab-5">⚠️ Prüfungsfragen<span
+            class="tab-badge tab-badge--highlight">29</span></button></li>
+    </ul>
+  </nav>
+
+  <!-- ========== Main Content ========== -->
+  <main class="main">
+
+    <!-- ────── Tab 1: Prozessortechnik ────── -->
+    <section class="tab-panel active" id="tab-1">
+      <div class="panel-header">
+        <h2 class="panel-title">Prozessortechnik</h2>
+        <div class="panel-actions">
+          <button class="btn-secondary btn-toggle-all">
+            <span class="btn-icon">▼</span>
+            <span class="btn-text">Alle aufklappen</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="card-list">
+
+        <!-- Q1 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was ist ein Prozessor und welche Rolle spielt er in einem Computer?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Ein Prozessor ist die <strong>zentrale Verarbeitungseinheit (CPU)</strong> eines Computers. Er ist für
+                die eigentliche Datenverarbeitung zuständig. Viel Aufwand wird in seine Weiterentwicklung gesteckt, da
+                er das <strong>Herzstück</strong> eines jeden Computersystems ist.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q2 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Welche beiden Befehlssatzarchitekturen werden in der Prozessortechnik unterschieden?
+            </p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Es werden <strong>RISC</strong> (Reduced Instruction Set Computing) und <strong>CISC</strong> (Complex
+                Instruction Set Computing) unterschieden. RISC hat einen reduzierten, CISC einen umfangreichen
+                Befehlssatz. Moderne Prozessoren kombinieren beide Konzepte.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q3 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Welche Maßnahmen zur Leistungssteigerung und Energieeffizienz werden in der
+              Prozessortechnik behandelt?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Folgende Maßnahmen werden genannt:</p>
+              <ul>
+                <li><strong>Steigerung der Taktfrequenz</strong> – einfachste Methode, aber physikalisch begrenzt</li>
+                <li><strong>Parallelisierung</strong> – Pipelining, Multi-Threading, Multi-Core</li>
+                <li><strong>Modularität</strong> – Funktionsblöcke mehrfach integrieren, einzeln abschalten</li>
+                <li><strong>64-Bit-Architektur</strong> – größerer Adressraum, besonders für Server</li>
+                <li><strong>Turbo Boost / Turbo Core</strong> – automatische Übertaktung einzelner Kerne</li>
+                <li><strong>Hardware-Beschleunigung</strong> – spezielle Einheiten für bestimmte Aufgaben</li>
+                <li><strong>Instructions per Cycle (IPC)</strong> – Effizienzmaß: Befehle pro Taktzyklus</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <a class="source-link" href="https://www.elektronik-kompendium.de/sites/com/0404281.htm" target="_blank"
+        rel="noopener">↗ Quelle: elektronik-kompendium.de</a>
+    </section>
+
+    <!-- ────── Tab 2: Prozessor-Architektur ────── -->
+    <section class="tab-panel" id="tab-2">
+      <div class="panel-header">
+        <h2 class="panel-title">Prozessor-Architektur</h2>
+        <div class="panel-actions">
+          <button class="btn-secondary btn-toggle-all">
+            <span class="btn-icon">▼</span>
+            <span class="btn-text">Alle aufklappen</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="card-list">
+
+        <!-- Q1 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was sind die drei Hauptkomponenten eines Prozessors?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Ein Prozessor besteht grob aus:</p>
+              <ol>
+                <li><strong>Rechenwerk (ALU – Arithmetic Logic Unit)</strong></li>
+                <li><strong>Leitwerk / Steuerwerk (CU – Control Unit)</strong></li>
+                <li><strong>Interner Speicher (Register / Akku)</strong></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q2 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Welche Funktion hat die Control Unit (CU) im Prozessor?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die Control Unit (auch Steuer-, Leit- oder Befehlswerk genannt) ist die <strong>Steuereinheit</strong>,
+                die für die Zusammenarbeit aller Teile des Prozessors verantwortlich ist. Sie übernimmt unter anderem:
+              </p>
+              <ul>
+                <li>Lesen und Speichern von Daten aus/im RAM</li>
+                <li>Bereitstellen, Dekodieren und Ausführen von Befehlen</li>
+                <li>Verarbeitung von Ein-/Ausgaben peripherer Geräte</li>
+                <li>Interrupt-Steuerung</li>
+                <li>Überwachung des Gesamtsystems</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q3 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was wird in der Arithmetic Logic Unit (ALU) ausgeführt?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>In der ALU werden alle <strong>arithmetischen und logischen Funktionen und Berechnungen</strong>
+                ausgeführt. Zur ALU gehören auch der Akku (Speicher) und die Flags (Ereignisspeicher). Erst durch das
+                Rechenwerk kann ein Prozessor Daten verarbeiten.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <a class="source-link" href="https://www.elektronik-kompendium.de/sites/com/1310171.htm" target="_blank"
+        rel="noopener">↗ Quelle: elektronik-kompendium.de</a>
+    </section>
+
+    <!-- ────── Tab 3: RISC & CISC ────── -->
+    <section class="tab-panel" id="tab-3">
+      <div class="panel-header">
+        <h2 class="panel-title">RISC &amp; CISC</h2>
+        <div class="panel-actions">
+          <button class="btn-secondary btn-toggle-all">
+            <span class="btn-icon">▼</span>
+            <span class="btn-text">Alle aufklappen</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="card-list">
+
+        <!-- Q1 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was steht die Abkürzung RISC für und was bedeutet das Konzept?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>RISC steht für <strong>Reduced Instruction Set Computing</strong> – also ein Konzept für einen
+                Prozessor mit einem <strong>reduzierten Befehlssatz</strong>. Er enthält nur wenige, elementare Befehle,
+                die innerhalb weniger Taktzyklen ausgeführt werden können. Die Befehle sind fest verdrahtet, der Aufbau
+                ist einfacher und überschaubarer.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q2 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Welche Prozessoren gelten als typische Vertreter von CISC, und wo werden
+              RISC-Prozessoren hauptsächlich eingesetzt?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <ul>
+                <li><strong>CISC:</strong> Intel- und AMD-Prozessoren (x86) gelten als typische CISC-Prozessoren, auch
+                  wenn sie intern RISC-artige Strukturen nutzen.</li>
+                <li><strong>RISC:</strong> Klassische RISC-Prozessoren werden hauptsächlich in <strong>Smartphones und
+                    Tablets</strong> eingesetzt. Die <strong>ARM-Architektur</strong> ist ein typischer Vertreter.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q3 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was sind die Hauptunterschiede zwischen RISC- und CISC-Prozessoren in Bezug auf
+              Effizienz und Performance?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th>Merkmal</th>
+                    <th>RISC</th>
+                    <th>CISC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Befehlssatz</td>
+                    <td>Reduziert, einfach</td>
+                    <td>Umfangreich, komplex</td>
+                  </tr>
+                  <tr>
+                    <td>Ausführungszeit</td>
+                    <td>Wenige Taktzyklen</td>
+                    <td>4–10 Takte pro Befehl</td>
+                  </tr>
+                  <tr>
+                    <td>Stromverbrauch</td>
+                    <td>Geringer</td>
+                    <td>Höher</td>
+                  </tr>
+                  <tr>
+                    <td>Programmcode</td>
+                    <td>Länger (mehr Speicher)</td>
+                    <td>Kürzer (weniger Speicher)</td>
+                  </tr>
+                  <tr>
+                    <td>Transistoren</td>
+                    <td>Weniger</td>
+                    <td>Mehr</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p style="margin-top:10px">RISC-Prozessoren sind in vielen Fällen effizienter, da etwa <strong>80 % aller
+                  Berechnungen</strong> mit nur <strong>20 % der verfügbaren Befehle</strong> ausgeführt werden – dies
+                macht den schlanken RISC-Ansatz vorteilhaft.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q4 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Warum werden moderne Prozessoren nicht mehr klar als RISC- oder CISC-Prozessoren
+              eingeordnet?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Weil moderne Prozessoren <strong>beide Konzepte kombinieren</strong>. Weder ARM- noch x86-Prozessoren
+                haben heute eine reinrassige RISC- oder CISC-Struktur. Bei genauer Analyse wäre ein moderner Prozessor
+                entweder ein „RISC-Prozessor mit CISC-Instruktionen" (z.&nbsp;B. ARM) oder ein „CISC-Prozessor mit
+                RISC-Instruktionen" (z.&nbsp;B. Intel/AMD). Eine klare Einordnung ergibt deshalb keinen praktischen
+                Sinn.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <a class="source-link" href="https://www.elektronik-kompendium.de/sites/com/0412281.htm" target="_blank"
+        rel="noopener">↗ Quelle: elektronik-kompendium.de</a>
+    </section>
+
+    <!-- ────── Tab 4: 64-Bit-Prozessor ────── -->
+    <section class="tab-panel" id="tab-4">
+      <div class="panel-header">
+        <h2 class="panel-title">64-Bit-Prozessor</h2>
+        <div class="panel-actions">
+          <button class="btn-secondary btn-toggle-all">
+            <span class="btn-icon">▼</span>
+            <span class="btn-text">Alle aufklappen</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="card-list">
+
+        <!-- Q1 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was bedeutet die Bezeichnung „64 Bit" im Kontext von Prozessoren?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die 64 Bit beziehen sich auf den <strong>physisch ansprechbaren Adressraum</strong> des
+                Arbeitsspeichers, der Schnittstellen und angeschlossenen Geräte. Ein 64-Bit-Prozessor kann theoretisch
+                einen wesentlich größeren Speicherbereich direkt ansprechen als ein 32-Bit-Prozessor.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q2 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was ist der maximale direkt ansprechbare Adressraum bei einem 32-Bit-System, und
+              warum sind 64-Bit-Prozessoren für Server sinnvoller?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Bei einem <strong>32-Bit-Prozessor</strong> können maximal <strong>4 GByte</strong> direkt adressiert
+                werden. In der Praxis sind es sogar weniger (etwas über 3 GByte), da Schnittstellen und Geräte ebenfalls
+                Adressen benötigen. Für einen Server sind 4 GByte viel zu wenig – dort ist der Speicherbedarf deutlich
+                größer, weshalb schon länger 64-Bit-Prozessoren eingesetzt werden.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q3 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Welche Architektur ist die iA-32/x86-Architektur und welche Merkmale hat sie?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die <strong>iA-32-Architektur</strong> (auch x86 genannt) wurde mit dem <strong>Intel 80386</strong>
+                eingeführt. Sie zeichnet sich durch vollständige <strong>Abwärtskompatibilität</strong> aus – jeder neue
+                Prozessor konnte ältere Software ohne Einschränkungen ausführen. Der Erfolgsfaktor ist die hohe
+                Kompatibilität und Austauschbarkeit von Hard- und Software.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q4 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was ist das Besondere an der iA-64-Architektur von Intel und HP, insbesondere
+              bezüglich der Register?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die <strong>iA-64-Architektur</strong> ist die 64-Bit-Architektur von Intel und HP (eingesetzt
+                z.&nbsp;B. im Itanium). Sie hat mit der iA-32/x86-Architektur nichts mehr gemein. Besonderheiten:</p>
+              <ul>
+                <li><strong>128 neue Register</strong>, alle <strong>64 Bit</strong> (genau genommen 65 Bit) breit</li>
+                <li>Das 65. Bit heißt „Not a Thing" und kennzeichnet spekulativ geladene Registerwerte</li>
+                <li>Keine Spezialregister mehr nötig</li>
+                <li>Eignet sich auch für 8-Bit- und 16-Bit-Verarbeitung</li>
+                <li>Viele Register sind besonders wichtig für die <strong>parallele Befehlsverarbeitung</strong></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q5 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon">F</span>
+            <p class="card-q-text">Was ist der Unterschied zwischen 32-Bit- und 64-Bit-Prozessoren in Bezug auf den
+              Adressraum?</p>
+            <span class="card-chevron">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>32-Bit</th>
+                    <th>64-Bit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Max. Adressraum</strong></td>
+                    <td>4 GByte (praktisch ~3 GByte)</td>
+                    <td>Theoretisch Exabyte-Bereich</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Geeignet für</strong></td>
+                    <td>Normale Desktop-Nutzung</td>
+                    <td>Server, speicherintensive Anwendungen</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Speicher-Limit</strong></td>
+                    <td>Schnell erreicht</td>
+                    <td>Für absehbare Zukunft ausreichend</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <a class="source-link" href="https://www.elektronik-kompendium.de/sites/com/1401191.htm" target="_blank"
+        rel="noopener">↗ Quelle: elektronik-kompendium.de</a>
+    </section>
+
+    <!-- ────── Tab 5: Exakte Prüfungsfragen ────── -->
+    <section class="tab-panel" id="tab-5">
+      <div class="panel-header">
+        <h2 class="panel-title">Exakte Prüfungsfragen</h2>
+        <div class="panel-actions">
+          <button class="btn-secondary btn-toggle-all">
+            <span class="btn-icon">▼</span>
+            <span class="btn-text">Alle aufklappen</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pruef-notice">
+        <span class="pruef-notice__icon">⚠️</span>
+        <span>Diese Fragen wurden <strong>exakt so</strong> in der Prüfung gestellt. Lerne sie auswendig!</span>
+      </div>
+
+      <div class="card-list">
+
+        <!-- Q1 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">1</span>
+            <p class="card-q-text">Welche Aufgaben übernimmt der Hauptprozessor in einem Computer?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Der Hauptprozessor (CPU) übernimmt die <strong>eigentliche Datenverarbeitung</strong>: Er führt
+                Berechnungen durch, steuert den Ablauf von Programmen, verarbeitet Ein- und Ausgaben und koordiniert
+                alle Komponenten des Systems.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q2 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">2</span>
+            <p class="card-q-text">Was bedeutet die Abkürzung CPU?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>CPU steht für <strong>Central Processing Unit</strong> – auf Deutsch: <strong>zentrale
+                  Verarbeitungseinheit</strong>. Sie ist das Herzstück eines Computers und führt alle Rechen- und
+                Steuervorgänge aus.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q3 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">3</span>
+            <p class="card-q-text">Was ist der Unterschied zwischen einer CPU und einer GPU?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die <strong>CPU</strong> ist für allgemeine Berechnungen und Steuerung zuständig (wenige,
+                leistungsstarke Kerne). Die <strong>GPU</strong> (Graphics Processing Unit) ist auf massiv parallele
+                Berechnungen spezialisiert (tausende kleinere Kerne), ideal für Grafik und KI.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q4 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">4</span>
+            <p class="card-q-text">Was ist ein Prozessor und welche Rolle spielt er in einem Computer?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Ein Prozessor ist die <strong>zentrale Verarbeitungseinheit (CPU)</strong> eines Computers. Er ist für
+                die eigentliche Datenverarbeitung zuständig und gilt als das <strong>Herzstück</strong> jedes
+                Computersystems.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q5 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">5</span>
+            <p class="card-q-text">Welche Maßnahmen und Techniken können zur Leistungssteigerung von Prozessoren
+              eingesetzt werden?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <ul>
+                <li><strong>Steigerung der Taktfrequenz</strong></li>
+                <li><strong>Parallelisierung</strong> – Pipelining, Multi-Threading, Multi-Core</li>
+                <li><strong>64-Bit-Architektur</strong> für größeren Adressraum</li>
+                <li><strong>Turbo Boost / Turbo Core</strong> – automatische Übertaktung einzelner Kerne</li>
+                <li><strong>Hardware-Beschleunigung</strong> durch Spezialeinheiten</li>
+                <li><strong>Erhöhung der IPC</strong> (Instructions per Cycle)</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q6 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">6</span>
+            <p class="card-q-text">Was sind die Hauptunterschiede zwischen RISC- und CISC-Architekturen?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p><strong>RISC</strong> hat einen reduzierten, einfachen Befehlssatz – wenige Taktzyklen pro Befehl,
+                geringer Stromverbrauch, fest verdrahtet. <strong>CISC</strong> hat einen umfangreichen, komplexen
+                Befehlssatz – 4–10 Taktzyklen, flexibler, aber höherer Energiebedarf. Moderne Prozessoren kombinieren
+                beide Ansätze.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q7 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">7</span>
+            <p class="card-q-text">Was ist eine zentrale Verarbeitungseinheit (CPU) in einem Computer?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die CPU ist das <strong>Herzstück</strong> des Computers. Sie übernimmt die Datenverarbeitung, führt
+                Befehle aus, steuert alle Systemkomponenten und koordiniert Ein-/Ausgabe.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q8 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">8</span>
+            <p class="card-q-text">Was sind die Hauptbestandteile eines Prozessors?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <ol>
+                <li><strong>Rechenwerk / ALU</strong> (Arithmetic Logic Unit)</li>
+                <li><strong>Steuerwerk / CU</strong> (Control Unit)</li>
+                <li><strong>Interner Speicher</strong> (Register / Akku)</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q9 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">9</span>
+            <p class="card-q-text">Welche Funktion hat das Steuerwerk (Control Unit) in einem Prozessor?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die Control Unit koordiniert alle Teile des Prozessors: Sie liest/speichert Daten aus dem RAM,
+                dekodiert und führt Befehle aus, verarbeitet Ein-/Ausgaben und überwacht das Gesamtsystem (inkl.
+                Interrupt-Steuerung).</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q10 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">10</span>
+            <p class="card-q-text">Was wird in der Arithmetic Logic Unit (ALU) eines Prozessors ausgeführt?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>In der ALU werden alle <strong>arithmetischen und logischen Funktionen und Berechnungen</strong>
+                ausgeführt. Dazu gehören auch der Akku (Speicher) und die Flags (Ereignisspeicher). Erst durch das
+                Rechenwerk kann ein Prozessor Daten verarbeiten.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q11 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">11</span>
+            <p class="card-q-text">Welche Funktion hat das Steuerwerk (Control Unit)?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Das Steuerwerk (auch Leit- oder Befehlswerk) ist die <strong>Steuereinheit</strong> des Prozessors. Es
+                ist verantwortlich für: Lesen und Speichern von Daten, Bereitstellen/Dekodieren/Ausführen von Befehlen,
+                Verarbeitung von Peripherie-Ein-/Ausgaben, Interrupt-Steuerung und Systemüberwachung.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q12 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">12</span>
+            <p class="card-q-text">Was wird in der Arithmetic Logic Unit (ALU) durchgeführt?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>In der ALU werden <strong>arithmetische Berechnungen</strong> (Addition, Subtraktion etc.) und
+                <strong>logische Operationen</strong> (AND, OR, NOT etc.) durchgeführt. Sie enthält den Akku
+                (Ergebnisspeicher) und Flags.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q13 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">13</span>
+            <p class="card-q-text">Welche Funktion hat die Control Unit (CU) im Prozessor?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die CU ist die <strong>Steuereinheit</strong>, die für die Zusammenarbeit aller Prozessorteile
+                verantwortlich ist. Aufgaben: Datenverwaltung (RAM), Befehlsausführung, Peripherieverarbeitung,
+                Interrupt-Steuerung, Systemüberwachung.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q14 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">14</span>
+            <p class="card-q-text">In welchen Geräten werden klassischerweise RISC-Prozessoren eingesetzt?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Klassische RISC-Prozessoren werden hauptsächlich in <strong>Smartphones und Tablets</strong>
+                eingesetzt. Die bekannteste RISC-Architektur ist <strong>ARM</strong>.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q15 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">15</span>
+            <p class="card-q-text">Warum sind RISC-Prozessoren in vielen Fällen den CISC-Prozessoren überlegen?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Weil <strong>80 % aller Berechnungen</strong> mit nur <strong>20 % der Befehle</strong> ausgeführt
+                werden. Der schlanke RISC-Befehlssatz ist dann effizienter: geringerer Stromverbrauch, schnellere
+                Ausführung (wenige Taktzyklen pro Befehl).</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q16 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">16</span>
+            <p class="card-q-text">Welche Art von Prozessoren verwendet hauptsächlich die ARM-Architektur?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>ARM verwendet hauptsächlich <strong>RISC-Prozessoren</strong> – mit reduziertem, einfachem Befehlssatz,
+                geringem Stromverbrauch und hoher Energieeffizienz. ARM-Chips dominieren den Smartphone- und
+                Tablet-Markt.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q17 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">17</span>
+            <p class="card-q-text">Was sind die Hauptunterschiede zwischen RISC- und CISC-Prozessoren?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th>Merkmal</th>
+                    <th>RISC</th>
+                    <th>CISC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Befehlssatz</td>
+                    <td>Reduziert, einfach</td>
+                    <td>Umfangreich, komplex</td>
+                  </tr>
+                  <tr>
+                    <td>Taktzyklen/Befehl</td>
+                    <td>Wenige</td>
+                    <td>4–10</td>
+                  </tr>
+                  <tr>
+                    <td>Stromverbrauch</td>
+                    <td>Geringer</td>
+                    <td>Höher</td>
+                  </tr>
+                  <tr>
+                    <td>Transistoren</td>
+                    <td>Weniger</td>
+                    <td>Mehr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q18 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">18</span>
+            <p class="card-q-text">In welchen Geräten werden klassische RISC-Prozessoren hauptsächlich eingesetzt?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Klassische RISC-Prozessoren werden hauptsächlich in <strong>Smartphones und Tablets</strong> verwendet.
+                Repräsentant: <strong>ARM-Architektur</strong>.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q19 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">19</span>
+            <p class="card-q-text">Warum ist es schwierig, moderne Prozessoren klar als RISC- oder CISC-Prozessoren zu
+              klassifizieren?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Weil moderne Prozessoren <strong>beide Konzepte kombinieren</strong>. Ein moderner Prozessor ist
+                entweder ein „RISC-Prozessor mit CISC-Instruktionen" (z.&nbsp;B. ARM) oder ein „CISC-Prozessor mit
+                RISC-Instruktionen" (z.&nbsp;B. Intel/AMD). Eine klare Zuordnung ist daher nicht sinnvoll.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q20 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">20</span>
+            <p class="card-q-text">Warum ist ein 64-Bit-Betriebssystem für Server sinnvoller als ein
+              32-Bit-Betriebssystem?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Ein 32-Bit-System kann maximal <strong>4 GByte RAM</strong> adressieren (praktisch ~3 GByte). Server
+                benötigen deutlich mehr Speicher. Ein 64-Bit-Betriebssystem kann den theoretisch riesigen
+                64-Bit-Adressraum nutzen und ist daher für speicherintensive Serveranwendungen unverzichtbar.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q21 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">21</span>
+            <p class="card-q-text">Was ist der maximale physisch ansprechbare Adressraum eines 32-Bit-Systems?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Der maximale theoretische Adressraum eines 32-Bit-Systems beträgt <strong>4 GByte</strong> (2³²
+                Adressen). Praktisch sind es etwas über <strong>3 GByte</strong>, da Adressen auch für Schnittstellen
+                und angeschlossene Geräte reserviert werden.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q22 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">22</span>
+            <p class="card-q-text">Was ist der Multiplikator und wofür wird er verwendet?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Der <strong>Multiplikator</strong> ist ein Faktor, mit dem der Basistakt (FSB/BCLK) multipliziert wird,
+                um die <strong>tatsächliche CPU-Taktfrequenz</strong> zu berechnen. Er ermöglicht es, die CPU-Frequenz
+                unabhängig vom Systembus zu erhöhen.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q23 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">23</span>
+            <p class="card-q-text">Wie berechnet sich die Taktfrequenz eines Prozessors bei AMD und Intel?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p><strong>Taktfrequenz = Basistakt (BCLK) × Multiplikator</strong><br>Beispiel: 100 MHz Basistakt ×
+                Multiplikator 35 = 3,5 GHz. Bei Intel heißt es <em>Turbo Boost</em>, bei AMD <em>Turbo Core</em> – beide
+                erhöhen den Multiplikator automatisch bei Bedarf.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q24 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">24</span>
+            <p class="card-q-text">Was sind Turbo Boost und Turbo Core?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p><strong>Turbo Boost</strong> (Intel) und <strong>Turbo Core</strong> (AMD) sind Technologien zur
+                <strong>automatischen Übertaktung</strong> einzelner CPU-Kerne, wenn die Temperatur und TDP es erlauben.
+                Die Frequenz wird dabei dynamisch erhöht.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q25 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">25</span>
+            <p class="card-q-text">Wie funktioniert der Turbo-Modus bei Prozessoren?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Im Turbo-Modus erhöht der Prozessor automatisch seinen <strong>Multiplikator</strong> und damit die
+                Taktfrequenz, wenn: die Temperatur im zulässigen Bereich liegt, die TDP nicht überschritten wird und
+                freie Kapazität vorhanden ist. Dies geschieht ohne manuellen Eingriff.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q26 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">26</span>
+            <p class="card-q-text">Was ist der Unterschied zwischen Turbo Boost/Turbo Core und klassischem Übertakten?
+            </p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p><strong>Turbo Boost/Core</strong> ist eine <strong>automatische, kontrollierte</strong> Übertaktung
+                durch den Prozessor selbst – innerhalb der TDP-Grenzen, vom Hersteller vorgesehen und garantiert.
+                <strong>Klassisches Übertakten</strong> ist <strong>manuell</strong>, vom Hersteller nicht garantiert
+                und kann die Hardware schädigen sowie die Garantie erlöschen lassen.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q27 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">27</span>
+            <p class="card-q-text">Wie funktioniert der Turbo-Modus bei Mehrkern-Prozessoren?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Bei Mehrkern-Prozessoren kann der Turbo-Modus <strong>einzelne aktive Kerne</strong> höher takten,
+                während andere Kerne inaktiv oder gering ausgelastet sind. Die eingesparte Energie der ungenutzten Kerne
+                wird genutzt, um die Frequenz aktiver Kerne zu erhöhen – solange die TDP eingehalten wird.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q28 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">28</span>
+            <p class="card-q-text">Was muss bei der Anwendung von Turbo Boost und Turbo Core hinsichtlich der TDP
+              beachtet werden?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die <strong>TDP (Thermal Design Power)</strong> darf durch den Turbo-Modus <strong>nicht dauerhaft
+                  überschritten</strong> werden. Der Prozessor reguliert die Übertaktung automatisch so, dass die
+                Gesamtleistungsaufnahme im TDP-Rahmen bleibt. Wird die TDP-Grenze erreicht, reduziert der Prozessor die
+                Taktfrequenz wieder.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q29 -->
+        <article class="card">
+          <div class="card-question">
+            <span class="card-q-icon pruef-num">29</span>
+            <p class="card-q-text">Was ist die Bedeutung von Thermal Design Power (TDP) im Zusammenhang mit Turbo Boost
+              und Turbo Core?</p>
+            <span class="card-chevron"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+          <div class="card-answer">
+            <div class="card-answer-inner">
+              <p>Die <strong>TDP</strong> gibt die maximale Wärmeleistung an, die das Kühlsystem dauerhaft abführen
+                muss. Bei Turbo Boost/Core dient die TDP als <strong>Obergrenze</strong>: Der Prozessor übertaktet nur
+                so lange und so weit, wie die Gesamtleistungsaufnahme die TDP nicht überschreitet.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    Lernzettel – Prozessortechnik &amp; CPU-Architektur · Berufsschule 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
