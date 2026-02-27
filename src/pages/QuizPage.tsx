@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
-import { lf2QuizQuestions, lf4QuizQuestions, type QuizQuestion } from '../data/quizData';
+import { lf1QuizQuestions, lf2QuizQuestions, lf4QuizQuestions, type QuizQuestion } from '../data/quizData';
 
 function shuffleArray<T>(array: T[]): T[] {
     const shuffled = [...array];
@@ -14,14 +14,14 @@ type QuizState = 'start' | 'playing' | 'result';
 
 export default function QuizPage() {
     const [state, setState] = useState<QuizState>('start');
-    const [activeTab, setActiveTab] = useState<'lf2' | 'lf4'>('lf2');
+    const [activeTab, setActiveTab] = useState<'lf1' | 'lf2' | 'lf4'>('lf1');
     const [questions, setQuestions] = useState<QuizQuestion[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const [score, setScore] = useState(0);
     const [answered, setAnswered] = useState(false);
 
-    const currentQuizData = activeTab === 'lf2' ? lf2QuizQuestions : lf4QuizQuestions;
+    const currentQuizData = activeTab === 'lf1' ? lf1QuizQuestions : activeTab === 'lf2' ? lf2QuizQuestions : lf4QuizQuestions;
 
     const startQuiz = useCallback(() => {
         setQuestions(shuffleArray(currentQuizData));
@@ -89,6 +89,13 @@ export default function QuizPage() {
 
                 <nav className="gs-tabs" style={{ marginBottom: '2rem', justifyContent: 'center' }}>
                     <button
+                        className={`gs-tab ${activeTab === 'lf1' ? 'gs-tab--active' : ''}`}
+                        onClick={() => setActiveTab('lf1')}
+                    >
+                        <span className="gs-tab__icon">🏢</span>
+                        <span className="gs-tab__label">LF1 Quiz</span>
+                    </button>
+                    <button
                         className={`gs-tab ${activeTab === 'lf2' ? 'gs-tab--active' : ''}`}
                         onClick={() => setActiveTab('lf2')}
                     >
@@ -106,8 +113,8 @@ export default function QuizPage() {
 
                 <div className="quiz-start-card">
                     <div className="quiz-start-card__glow" />
-                    <div className="quiz-start-icon">{activeTab === 'lf2' ? '📝' : '🔒'}</div>
-                    <h2 className="quiz-start-title">{activeTab === 'lf2' ? 'Prozessortechnik Quiz' : 'IT-Grundschutz Quiz'}</h2>
+                    <div className="quiz-start-icon">{activeTab === 'lf1' ? '🏢' : activeTab === 'lf2' ? '📝' : '🔒'}</div>
+                    <h2 className="quiz-start-title">{activeTab === 'lf1' ? 'BWL Grundlagen Quiz' : activeTab === 'lf2' ? 'Prozessortechnik Quiz' : 'IT-Grundschutz Quiz'}</h2>
                     <div className="quiz-start-stats">
                         <div className="quiz-stat">
                             <span className="quiz-stat__number">{totalQuestions}</span>
@@ -125,7 +132,12 @@ export default function QuizPage() {
                         </div>
                     </div>
                     <p className="quiz-start-desc">
-                        {activeTab === 'lf2' ? (
+                        {activeTab === 'lf1' ? (
+                            <>
+                                Teste dein Wissen über Vision, Mission & Unternehmensphilosophie.
+                                Die Reihenfolge wird bei jedem Start zufällig gemischt.
+                            </>
+                        ) : activeTab === 'lf2' ? (
                             <>
                                 Alle Fragen wurden exakt so in der Prüfung gestellt.
                                 Die Reihenfolge wird bei jedem Start zufällig gemischt.

@@ -15,9 +15,10 @@ const lernItems: LernItem[] = [
         icon: '🔌',
         title: 'Lernfeld 1',
         description: 'Das Unternehmen und die eigene Rolle im Betrieb',
-        href: '#',
+        href: '/bwl',
         accent: '255, 200, 60',
-        available: false,
+        available: true,
+        internal: true,
     },
     {
         icon: '💾',

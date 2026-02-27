@@ -6,7 +6,7 @@ export interface LkEntry {
 export const lkData: LkEntry[] = [
   { date: '2026-02-25', subject: 'WL' },
   { date: '2026-02-26', subject: 'LF3' },
-  { date: '2026-03-03', subject: 'Löffler' },
+  { date: '2026-03-03', subject: 'LF2' },
   { date: '2026-03-04', subject: 'DE' },
   { date: '2026-03-05', subject: 'LF4' },
 ];

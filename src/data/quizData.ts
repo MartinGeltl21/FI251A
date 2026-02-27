@@ -327,6 +327,229 @@ export const lf2QuizQuestions: QuizQuestion[] = [
     },
 ];
 
+export const lf1QuizQuestions: QuizQuestion[] = [
+    {
+        id: 1,
+        question: 'Was ist das oberste Ziel eines Unternehmens laut BWL-Grundlagen?',
+        options: [
+            'Möglichst viele Mitarbeiter einzustellen',
+            'Profit zu generieren',
+            'Die beste Werbung zu schalten',
+            'Soziale Projekte zu unterstützen'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 2,
+        question: 'Was beschreibt die Unternehmensvision?',
+        options: [
+            'Den aktuellen Geschäftsbericht',
+            'Die täglichen operativen Aufgaben',
+            'Ein Zukunftsbild – einen angestrebten Idealzustand in der Zukunft',
+            'Die aktuellen Verkaufszahlen'
+        ],
+        correctIndex: 2,
+    },
+    {
+        id: 3,
+        question: 'Was beschreibt die Unternehmensmission?',
+        options: [
+            'Den Weg zur Realisierung der Vision – was tun wir, für wen und wie?',
+            'Das Zukunftsbild des Unternehmens',
+            'Die Aktionärsstruktur des Unternehmens',
+            'Die Gehaltsstruktur der Mitarbeiter'
+        ],
+        correctIndex: 0,
+    },
+    {
+        id: 4,
+        question: 'Welchen Zeitbezug hat die Mission?',
+        options: [
+            'Zukunft',
+            'Vergangenheit',
+            'Gegenwart',
+            'Zeitlos'
+        ],
+        correctIndex: 2,
+    },
+    {
+        id: 5,
+        question: 'Wie lautet der Zusammenhang zwischen Vision und Mission?',
+        options: [
+            'Vision und Mission sind dasselbe',
+            'Gegenwart → Mission → Vision (Zukunft) – die Mission ist die Realisierung der Vision',
+            'Die Vision kommt vor der Mission zeitlich betrachtet',
+            'Die Mission ersetzt die Vision nach 5 Jahren'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 6,
+        question: 'Was ist das primäre Ziel eines jeden Unternehmens?',
+        options: [
+            'Marktführer zu werden',
+            'Die Umwelt zu schützen',
+            'Die Erwirtschaftung von Gewinn – er ist die Existenzgrundlage',
+            'Möglichst viele Filialen zu eröffnen'
+        ],
+        correctIndex: 2,
+    },
+    {
+        id: 7,
+        question: 'Warum verfolgen Unternehmen neben Gewinn auch soziale und ökologische Ziele?',
+        options: [
+            'Nur weil es gesetzlich vorgeschrieben ist',
+            'Weil Unternehmen soziale Gebilde sind, die in der Gesellschaft verankert sind',
+            'Weil es die Steuerlast senkt',
+            'Weil es keine anderen Ziele gibt'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 8,
+        question: 'Was kann bei verschiedenen Unternehmenszielen auftreten?',
+        options: [
+            'Sie sind immer miteinander vereinbar',
+            'Sie stehen häufig im Konflikt miteinander und sind nicht vereinbar',
+            'Sie werden automatisch zusammengeführt',
+            'Sie betreffen nur die Geschäftsführung'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 9,
+        question: 'Was versteht man unter der Unternehmensphilosophie?',
+        options: [
+            'Den Jahresabschluss eines Unternehmens',
+            'Die IT-Infrastruktur eines Unternehmens',
+            'Den „Charakter eines Unternehmens" – grundlegender Pfeiler der Corporate Identity',
+            'Die Marketingstrategie des Unternehmens'
+        ],
+        correctIndex: 2,
+    },
+    {
+        id: 10,
+        question: 'Wie setzt sich die Corporate Identity zusammen?',
+        options: [
+            'Logo + Firmenname',
+            'Unternehmensphilosophie + Unternehmensleitbild',
+            'Gewinn + Umsatz',
+            'Vision + Werbung'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 11,
+        question: 'Was ist die Wirkung der Unternehmensphilosophie nach Innen?',
+        options: [
+            'Sie steigert den Aktienkurs',
+            'Sie erhöht die Produktionsgeschwindigkeit',
+            'Basis für einheitlichen Umgang, fördert Gemeinschaftsgefühl und Identifikation',
+            'Sie regelt die Arbeitszeiten'
+        ],
+        correctIndex: 2,
+    },
+    {
+        id: 12,
+        question: 'Was ist die Wirkung der Unternehmensphilosophie nach Außen?',
+        options: [
+            'Verstärkt ein positives Bild bei Kunden, Lieferanten und Investoren → wirtschaftlicher Erfolg',
+            'Sie senkt die Produktionskosten',
+            'Sie verhindert Konkurrenz',
+            'Sie regelt die Steuerpflicht'
+        ],
+        correctIndex: 0,
+    },
+    {
+        id: 13,
+        question: 'Was zeichnet die Unternehmensphilosophie moderner Unternehmen aus?',
+        options: [
+            'Sie ist geheim und nur der Geschäftsführung bekannt',
+            'Sie ist niedergeschrieben, offen kommuniziert und soll von allen gelebt werden',
+            'Sie wird nur mündlich überliefert',
+            'Sie ändert sich täglich'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 14,
+        question: 'Welche 3 Punkte sind die wichtigsten der Unternehmensphilosophie?',
+        options: [
+            'Preis, Qualität, Service',
+            'Marketing, Vertrieb, Produktion',
+            'Gemeinsame Werte & Normen, Alleinstellungsmerkmale (USP), Nutzen',
+            'Gewinn, Umsatz, Marktanteil'
+        ],
+        correctIndex: 2,
+    },
+    {
+        id: 15,
+        question: 'Wofür steht die Abkürzung USP?',
+        options: [
+            'Universal System Protocol',
+            'Unique Selling Propositions – Alleinstellungsmerkmale',
+            'United Service Provider',
+            'Unified Standard Process'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 16,
+        question: 'Warum sind Alleinstellungsmerkmale (USP) wichtig für die Unternehmensphilosophie?',
+        options: [
+            'Weil sie gesetzlich vorgeschrieben sind',
+            'Weil Unternehmen sich klar von anderen der eigenen Branche abgrenzen sollen',
+            'Weil sie die Steuern senken',
+            'Weil sie nur für die Werbung relevant sind'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 17,
+        question: 'Was ist der USP von Amazon laut Unternehmensphilosophie?',
+        options: [
+            'Google verbindet den Suchenden und den Content besser als jede andere Suchmaschine',
+            'Das schnellste Liefernetzwerk der Welt',
+            'Der Kunde steht im Mittelpunkt; durch Amazon soll sein Leben vereinfacht werden',
+            'Die günstigsten Preise im Internet'
+        ],
+        correctIndex: 2,
+    },
+    {
+        id: 18,
+        question: 'Was bewirkt der Punkt „Nutzen" in der Unternehmensphilosophie?',
+        options: [
+            'Er stärkt die Identifikation der Mitarbeiter und kann im Marketing eingesetzt werden',
+            'Er regelt nur die Gehaltsstruktur',
+            'Er bestimmt die Produktpalette',
+            'Er ist irrelevant für die Außenwirkung'
+        ],
+        correctIndex: 0,
+    },
+    {
+        id: 19,
+        question: 'Warum sollten Mitarbeiter in die Erarbeitung der Unternehmensphilosophie eingebunden werden?',
+        options: [
+            'Damit sie weniger arbeiten müssen',
+            'Damit die Werte möglichst von allen Mitarbeitern mitgetragen werden',
+            'Damit die Geschäftsführung entlastet wird',
+            'Es ist gesetzlich vorgeschrieben'
+        ],
+        correctIndex: 1,
+    },
+    {
+        id: 20,
+        question: 'Welchen Zeitbezug hat die Unternehmensphilosophie?',
+        options: [
+            'Vergangenheit',
+            'Nur Gegenwart',
+            'Nur Zukunft',
+            'Dauerhaft'
+        ],
+        correctIndex: 3,
+    },
+];
+
 export const lf4QuizQuestions: QuizQuestion[] = [
     {
         id: 1,
