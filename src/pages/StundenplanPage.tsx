@@ -1,4 +1,5 @@
 import { lessonTimes, schedule, DAYS, getSubjectColor } from '../data/stundenplanData';
+import { Coffee } from 'lucide-react';
 
 export default function StundenplanPage() {
     const now = new Date();
@@ -62,7 +63,7 @@ export default function StundenplanPage() {
                                     <tr key={lt.time} className="sp-break-row">
                                         <td colSpan={7} className="sp-break-cell">
                                             <div className="sp-break-line">
-                                                <span className="sp-break-label">☕ {lt.time}</span>
+                                                <span className="sp-break-label"><Coffee size={16} style={{ display: 'inline-block', marginBottom: '-2px' }} /> {lt.time}</span>
                                             </div>
                                         </td>
                                     </tr>

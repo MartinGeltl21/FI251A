@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BookOpen, Book, Target, AlertTriangle, Telescope, Compass, Landmark, Shuffle, Globe, Lightbulb, Key, Link as LinkIcon } from 'lucide-react';
+import type { ElementType } from 'react';
 
 type TabKey = 'lektion1' | 'lektion2' | 'pruefung';
 
-const tabs: { key: TabKey; label: string; icon: string }[] = [
-    { key: 'lektion1', label: 'Lektion 1', icon: '📖' },
-    { key: 'lektion2', label: 'Lektion 2', icon: '📘' },
-    { key: 'pruefung', label: 'Prüfungszusammenfassung', icon: '🎯' },
+const tabs: { key: TabKey; label: string; icon: ElementType }[] = [
+    { key: 'lektion1', label: 'Lektion 1', icon: BookOpen },
+    { key: 'lektion2', label: 'Lektion 2', icon: Book },
+    { key: 'pruefung', label: 'Prüfungszusammenfassung', icon: Target },
 ];
 
 /* ────────────────────────────────────────────
@@ -36,7 +38,7 @@ function Lektion1() {
 
                 <div className="gs-two-col">
                     <div>
-                        <h4 className="gs-col-heading">🔭 Unternehmensvision</h4>
+                        <h4 className="gs-col-heading"><Telescope size={20} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Unternehmensvision</h4>
                         <ul className="gs-list gs-list--compact">
                             <li>Beschreibt ein <strong>Zukunftsbild</strong> – wo will das Unternehmen langfristig hin?</li>
                             <li>Ist ein <strong>angestrebter Idealzustand</strong> in der Zukunft</li>
@@ -44,7 +46,7 @@ function Lektion1() {
                         </ul>
                     </div>
                     <div>
-                        <h4 className="gs-col-heading">🧭 Unternehmensmission</h4>
+                        <h4 className="gs-col-heading"><Compass size={20} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Unternehmensmission</h4>
                         <ul className="gs-list gs-list--compact">
                             <li>Beschreibt den <strong>Weg zur Realisierung der Vision</strong></li>
                             <li>Beantwortet: <strong>Was tun wir? Für wen? Und wie?</strong></li>
@@ -54,7 +56,7 @@ function Lektion1() {
                 </div>
 
                 <div className="gs-infobox">
-                    <div className="gs-infobox__header">🔗 Zusammenhang Vision & Mission</div>
+                    <div className="gs-infobox__header"><LinkIcon size={18} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Zusammenhang Vision & Mission</div>
                     <ul className="gs-list gs-list--compact">
                         <li><strong>Gegenwart → Mission → Zukunft</strong></li>
                         <li>Die <strong>Mission</strong> ist der Weg, der in der Gegenwart beginnt und zur <strong>Vision</strong> (dem Zukunftsbild) führt</li>
@@ -118,7 +120,7 @@ function Lektion2() {
                 </p>
 
                 <div className="gs-infobox">
-                    <div className="gs-infobox__header">🏛️ Corporate Identity</div>
+                    <div className="gs-infobox__header"><Landmark size={18} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Corporate Identity</div>
                     <ul className="gs-list gs-list--compact">
                         <li>Aus der Unternehmensphilosophie wird das <strong>Unternehmensleitbild</strong> abgeleitet</li>
                         <li><strong>Unternehmensleitbild + Unternehmensphilosophie = Corporate Identity</strong></li>
@@ -127,14 +129,14 @@ function Lektion2() {
 
                 <div className="gs-two-col">
                     <div>
-                        <h4 className="gs-col-heading">🔀 Wirkung nach Innen</h4>
+                        <h4 className="gs-col-heading"><Shuffle size={20} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Wirkung nach Innen</h4>
                         <ul className="gs-list gs-list--compact">
                             <li><strong>Basis für einen einheitlichen Umgang</strong> miteinander</li>
                             <li>Fördert das <strong>Gemeinschaftsgefühl</strong> und die <strong>Identifikation</strong> mit dem Unternehmen</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="gs-col-heading">🌍 Wirkung nach Außen</h4>
+                        <h4 className="gs-col-heading"><Globe size={20} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Wirkung nach Außen</h4>
                         <ul className="gs-list gs-list--compact">
                             <li>Verstärkt ein <strong>positives Bild des Unternehmens</strong></li>
                             <li>Positive Wahrnehmung bei <strong>Kunden, Lieferanten, Investoren</strong> → wirtschaftlicher Erfolg</li>
@@ -176,7 +178,7 @@ function Lektion2() {
                 </div>
 
                 <div className="gs-infobox">
-                    <div className="gs-infobox__header">💡 Zentrale Fragen bei Werten & Normen</div>
+                    <div className="gs-infobox__header"><Lightbulb size={18} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Zentrale Fragen bei Werten & Normen</div>
                     <ul className="gs-list gs-list--compact">
                         <li>Wie soll der Umgang der Mitarbeiter <strong>untereinander</strong> aussehen?</li>
                         <li>Wie soll der Umgang mit <strong>Kunden und Partnern</strong> aussehen?</li>
@@ -218,7 +220,7 @@ function Lektion2() {
                     </div>
                 </div>
                 <div className="gs-highlight">
-                    ⚠️ Dieses Beispiel ist sehr kurz gehalten – eine realistische Unternehmensphilosophie ist wesentlich umfangreicher.
+                    <AlertTriangle size={18} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '4px' }} /> Dieses Beispiel ist sehr kurz gehalten – eine realistische Unternehmensphilosophie ist wesentlich umfangreicher.
                 </div>
             </section>
         </div>
@@ -232,7 +234,7 @@ function Pruefungszusammenfassung() {
     return (
         <div className="gs-content">
             <div className="gs-exam-notice">
-                <span className="gs-exam-notice__icon">⚠️</span>
+                <span className="gs-exam-notice__icon"><AlertTriangle size={24} /></span>
                 <div>
                     <strong>Prüfungsrelevante Kernthemen</strong>
                     <p>Die folgenden Punkte fassen die wichtigsten Inhalte zusammen, die du für die LK beherrschen musst.</p>
@@ -241,7 +243,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     Vision & Mission
                 </h2>
                 <ul className="gs-list gs-list--check">
@@ -254,7 +256,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     Unternehmensziele
                 </h2>
                 <ul className="gs-list gs-list--check">
@@ -268,7 +270,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     Unternehmensphilosophie
                 </h2>
                 <ul className="gs-list gs-list--check">
@@ -282,7 +284,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     3 wichtigste Punkte merken
                 </h2>
                 <div className="gs-cards-row">
@@ -306,7 +308,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     Zusammenfassung auf einen Blick
                 </h2>
                 <div className="gs-table-wrapper">
@@ -353,7 +355,7 @@ export default function BWLPage() {
                         onClick={() => setActiveTab(tab.key)}
                         id={`bwl-tab-${tab.key}`}
                     >
-                        <span className="gs-tab__icon">{tab.icon}</span>
+                        <span className="gs-tab__icon"><tab.icon size={18} /></span>
                         <span className="gs-tab__label">{tab.label}</span>
                     </button>
                 ))}

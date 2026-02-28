@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BookOpen, Book, Target, AlertTriangle, Package, Key, ClipboardList, Link as LinkIcon } from 'lucide-react';
+import type { ElementType } from 'react';
 
 type TabKey = 'lektion1' | 'lektion2' | 'pruefung';
 
-const tabs: { key: TabKey; label: string; icon: string }[] = [
-    { key: 'lektion1', label: 'Lektion 1', icon: '📖' },
-    { key: 'lektion2', label: 'Lektion 2', icon: '📘' },
-    { key: 'pruefung', label: 'Prüfungszusammenfassung', icon: '🎯' },
+const tabs: { key: TabKey; label: string; icon: ElementType }[] = [
+    { key: 'lektion1', label: 'Lektion 1', icon: BookOpen },
+    { key: 'lektion2', label: 'Lektion 2', icon: Book },
+    { key: 'pruefung', label: 'Prüfungszusammenfassung', icon: Target },
 ];
 
 /* ────────────────────────────────────────────
@@ -62,7 +64,7 @@ function Lektion1() {
                 </ul>
 
                 <div className="gs-infobox">
-                    <div className="gs-infobox__header">📦 Aufbau eines Bausteins</div>
+                    <div className="gs-infobox__header"><Package size={18} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Aufbau eines Bausteins</div>
                     <ul className="gs-list gs-list--compact">
                         <li><strong>Beschreibung:</strong> Kurze Einleitung, worum es geht (z.B. „B 1.5 Virenschutz")</li>
                         <li><strong>Gefährdungskatalog:</strong> Auflistung typischer Bedrohungen</li>
@@ -132,7 +134,7 @@ function Lektion1() {
                 </div>
 
                 <div className="gs-infobox">
-                    <div className="gs-infobox__header">📋 Kursgliederung (Standard-Absicherung)</div>
+                    <div className="gs-infobox__header"><ClipboardList size={18} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Kursgliederung (Standard-Absicherung)</div>
                     <ol className="gs-list gs-list--ordered">
                         <li>Lektion 2: Sicherheitsmanagement</li>
                         <li>Lektion 3: Strukturanalyse</li>
@@ -354,7 +356,7 @@ function Lektion2() {
                 <p className="gs-section__intro">Beschreibt, mit welchen <strong>konkreten Maßnahmen</strong> die Ziele der Sicherheitsleitlinie umgesetzt werden – gilt für den <strong>Informationsverbund</strong>.</p>
 
                 <div className="gs-infobox">
-                    <div className="gs-infobox__header">🔗 Informationsverbund</div>
+                    <div className="gs-infobox__header"><LinkIcon size={18} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} /> Informationsverbund</div>
                     <ul className="gs-list gs-list--compact">
                         <li>Sinnvolle Mindestgröße → idealerweise die gesamte Institution</li>
                         <li>In größeren Institutionen: Teilbereiche möglich (organisatorisch oder anwendungsbezogen abgrenzbar)</li>
@@ -404,7 +406,7 @@ function Pruefungszusammenfassung() {
     return (
         <div className="gs-content">
             <div className="gs-exam-notice">
-                <span className="gs-exam-notice__icon">⚠️</span>
+                <span className="gs-exam-notice__icon"><AlertTriangle size={24} /></span>
                 <div>
                     <strong>Prüfungsrelevante Kernthemen</strong>
                     <p>Die folgenden Punkte fassen die wichtigsten Inhalte zusammen, die du für die Prüfung beherrschen musst.</p>
@@ -413,7 +415,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     BSI-Standards & Kompendium
                 </h2>
                 <ul className="gs-list gs-list--check">
@@ -427,7 +429,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     PDCA-Zyklus
                 </h2>
                 <ul className="gs-list gs-list--check">
@@ -439,7 +441,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     4 Phasen des Sicherheitsprozesses
                 </h2>
                 <ol className="gs-list gs-list--ordered gs-list--check">
@@ -452,7 +454,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     Rollen & Verantwortlichkeiten
                 </h2>
                 <ul className="gs-list gs-list--check">
@@ -465,7 +467,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     Sicherheitsleitlinie – 7 Inhalte
                 </h2>
                 <ol className="gs-list gs-list--ordered gs-list--check">
@@ -481,7 +483,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     Sicherheitskonzept & Informationsverbund
                 </h2>
                 <ul className="gs-list gs-list--check">
@@ -494,7 +496,7 @@ function Pruefungszusammenfassung() {
 
             <section className="gs-section">
                 <h2 className="gs-section__title">
-                    <span className="gs-section__num">🔑</span>
+                    <span className="gs-section__num"><Key size={20} /></span>
                     3 Vorgehensweisen merken
                 </h2>
                 <div className="gs-cards-row">
@@ -546,7 +548,7 @@ export default function ITGrundschutzPage() {
                         onClick={() => setActiveTab(tab.key)}
                         id={`gs-tab-${tab.key}`}
                     >
-                        <span className="gs-tab__icon">{tab.icon}</span>
+                        <span className="gs-tab__icon"><tab.icon size={18} /></span>
                         <span className="gs-tab__label">{tab.label}</span>
                     </button>
                 ))}

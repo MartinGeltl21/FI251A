@@ -1,5 +1,7 @@
 import { useState, useCallback, useMemo } from 'react';
 import { lf1QuizQuestions, lf2QuizQuestions, lf4QuizQuestions, type QuizQuestion } from '../data/quizData';
+import { Trophy, PartyPopper, Dumbbell, BookOpen, Building2, Monitor, ShieldCheck, PenSquare, Lock } from 'lucide-react';
+
 
 function shuffleArray<T>(array: T[]): T[] {
     const shuffled = [...array];
@@ -61,10 +63,10 @@ export default function QuizPage() {
     }, [score, totalQuestions]);
 
     const getResultEmoji = () => {
-        if (percentage >= 90) return '🏆';
-        if (percentage >= 70) return '🎉';
-        if (percentage >= 50) return '💪';
-        return '📚';
+        if (percentage >= 90) return <Trophy size={48} />;
+        if (percentage >= 70) return <PartyPopper size={48} />;
+        if (percentage >= 50) return <Dumbbell size={48} />;
+        return <BookOpen size={48} />;
     };
 
     const getResultMessage = () => {
@@ -92,28 +94,28 @@ export default function QuizPage() {
                         className={`gs-tab ${activeTab === 'lf1' ? 'gs-tab--active' : ''}`}
                         onClick={() => setActiveTab('lf1')}
                     >
-                        <span className="gs-tab__icon">🏢</span>
+                        <span className="gs-tab__icon"><Building2 size={18} /></span>
                         <span className="gs-tab__label">LF1 Quiz</span>
                     </button>
                     <button
                         className={`gs-tab ${activeTab === 'lf2' ? 'gs-tab--active' : ''}`}
                         onClick={() => setActiveTab('lf2')}
                     >
-                        <span className="gs-tab__icon">💻</span>
+                        <span className="gs-tab__icon"><Monitor size={18} /></span>
                         <span className="gs-tab__label">LF2 Quiz</span>
                     </button>
                     <button
                         className={`gs-tab ${activeTab === 'lf4' ? 'gs-tab--active' : ''}`}
                         onClick={() => setActiveTab('lf4')}
                     >
-                        <span className="gs-tab__icon">🛡️</span>
+                        <span className="gs-tab__icon"><ShieldCheck size={18} /></span>
                         <span className="gs-tab__label">LF4 Quiz</span>
                     </button>
                 </nav>
 
                 <div className="quiz-start-card">
                     <div className="quiz-start-card__glow" />
-                    <div className="quiz-start-icon">{activeTab === 'lf1' ? '🏢' : activeTab === 'lf2' ? '📝' : '🔒'}</div>
+                    <div className="quiz-start-icon">{activeTab === 'lf1' ? <Building2 size={48} /> : activeTab === 'lf2' ? <PenSquare size={48} /> : <Lock size={48} />}</div>
                     <h2 className="quiz-start-title">{activeTab === 'lf1' ? 'BWL Grundlagen Quiz' : activeTab === 'lf2' ? 'Prozessortechnik Quiz' : 'IT-Grundschutz Quiz'}</h2>
                     <div className="quiz-start-stats">
                         <div className="quiz-stat">

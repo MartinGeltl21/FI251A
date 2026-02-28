@@ -1,7 +1,9 @@
 import { useNavigate } from 'react-router-dom';
+import { Plug, HardDrive, Monitor, ShieldCheck, Settings, Book, Globe, Briefcase, Landmark } from 'lucide-react';
+import type { ElementType } from 'react';
 
 interface LernItem {
-    icon: string;
+    icon: ElementType;
     title: string;
     description: string;
     href: string;
@@ -12,7 +14,7 @@ interface LernItem {
 
 const lernItems: LernItem[] = [
     {
-        icon: '🔌',
+        icon: Plug,
         title: 'Lernfeld 1',
         description: 'Das Unternehmen und die eigene Rolle im Betrieb',
         href: '/bwl',
@@ -21,7 +23,7 @@ const lernItems: LernItem[] = [
         internal: true,
     },
     {
-        icon: '💾',
+        icon: HardDrive,
         title: 'Lernfeld 2',
         description: 'Arbeitsplätze nach Kundenwunsch ausstatten',
         href: '/CPU/index.html',
@@ -29,7 +31,7 @@ const lernItems: LernItem[] = [
         available: true,
     },
     {
-        icon: '🖥️',
+        icon: Monitor,
         title: 'Lernfeld 3',
         description: 'Clients in Netzwerke einbinden',
         href: '#',
@@ -37,7 +39,7 @@ const lernItems: LernItem[] = [
         available: false,
     },
     {
-        icon: '🗄️',
+        icon: ShieldCheck,
         title: 'Lernfeld 4',
         description: 'Schutzbedarfsanalyse im eigenen Arbeitsbereich',
         href: '/it-grundschutz',
@@ -46,7 +48,7 @@ const lernItems: LernItem[] = [
         internal: true,
     },
     {
-        icon: '⚙️',
+        icon: Settings,
         title: 'Lernfeld 5',
         description: 'Software zur Verwaltung von Daten anpassen',
         href: '#',
@@ -54,7 +56,7 @@ const lernItems: LernItem[] = [
         available: false,
     },
     {
-        icon: '📖',
+        icon: Book,
         title: 'Deutsch',
         description: 'DE – Sprachkompetenz & Kommunikation',
         href: '#',
@@ -62,7 +64,7 @@ const lernItems: LernItem[] = [
         available: false,
     },
     {
-        icon: '🌍',
+        icon: Globe,
         title: 'Englisch',
         description: 'EN – Business English & Fachsprache IT (nicht xD)',
         href: '#',
@@ -70,7 +72,7 @@ const lernItems: LernItem[] = [
         available: false,
     },
     {
-        icon: '💼',
+        icon: Briefcase,
         title: 'Wirtschaftslehre',
         description: 'WL – Wirtschaft, Recht & betriebliche Zusammenhänge',
         href: '#',
@@ -78,7 +80,7 @@ const lernItems: LernItem[] = [
         available: false,
     },
     {
-        icon: '🏛️',
+        icon: Landmark,
         title: 'Sozialkunde',
         description: 'SK – Politik, Gesellschaft & soziale Kompetenz',
         href: '#',
@@ -116,7 +118,7 @@ export default function LernmaterialPage() {
                                 onClick={() => navigate(item.href)}
                             >
                                 <div className="lern-card__glow" />
-                                <div className="lern-card__icon">{item.icon}</div>
+                                <div className="lern-card__icon"><item.icon /></div>
                                 <div className="lern-card__content">
                                     <h3 className="lern-card__title">{item.title}</h3>
                                     <p className="lern-card__desc">{item.description}</p>
@@ -137,7 +139,7 @@ export default function LernmaterialPage() {
                             } as React.CSSProperties}
                         >
                             <div className="lern-card__glow" />
-                            <div className="lern-card__icon">{item.icon}</div>
+                            <div className="lern-card__icon"><item.icon /></div>
                             <div className="lern-card__content">
                                 <h3 className="lern-card__title">{item.title}</h3>
                                 <p className="lern-card__desc">{item.description}</p>

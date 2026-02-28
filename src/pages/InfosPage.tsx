@@ -1,3 +1,5 @@
+import { Repeat, Calendar, Clock } from 'lucide-react';
+
 export default function InfosPage() {
     return (
         <div className="infos-page">
@@ -15,7 +17,7 @@ export default function InfosPage() {
                 <div className="info-card">
                     <div className="info-card__glow" />
                     <div className="info-card__header">
-                        <div className="info-card__icon">🔁</div>
+                        <div className="info-card__icon"><Repeat size={24} /></div>
                         <span className="info-card__tag info-card__tag--lf5">LF 5</span>
                     </div>
                     <div className="info-card__content">
@@ -25,7 +27,7 @@ export default function InfosPage() {
                         </p>
                     </div>
                     <div className="info-card__footer">
-                        <span>🕒</span> Aktualisiert: Heute
+                        <Clock size={16} /> Aktualisiert: Heute
                     </div>
                 </div>
 
@@ -33,7 +35,7 @@ export default function InfosPage() {
                 <div className="info-card">
                     <div className="info-card__glow" />
                     <div className="info-card__header">
-                        <div className="info-card__icon">📆</div>
+                        <div className="info-card__icon"><Calendar size={24} /></div>
                         <span className="info-card__tag info-card__tag--wichtig">Wichtig</span>
                     </div>
                     <div className="info-card__content">
@@ -43,7 +45,7 @@ export default function InfosPage() {
                         </p>
                     </div>
                     <div className="info-card__footer">
-                        <span>🕒</span> Aktualisiert: Vor 2 Stunden
+                        <Clock size={16} /> Aktualisiert: Vor 2 Stunden
                     </div>
                 </div>
             </div>
