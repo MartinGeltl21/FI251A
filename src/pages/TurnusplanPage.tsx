@@ -47,7 +47,7 @@ function YearCalendar({ onClose }: { onClose: () => void }) {
         const lastDay = new Date(year, month + 1, 0);
 
         // Find Monday of the first week
-        let start = new Date(firstDay);
+        const start = new Date(firstDay);
         const dayOfWeek = start.getDay() || 7; // Mon=1 ... Sun=7
         start.setDate(start.getDate() - (dayOfWeek - 1));
 

@@ -9,6 +9,7 @@ export const lkData: LkEntry[] = [
   { date: '2026-03-03', subject: 'LF2' },
   { date: '2026-03-04', subject: 'DE' },
   { date: '2026-03-05', subject: 'LF4' },
+  { date: '2026-04-29', subject: 'WL' },
 ];
 
 export interface BSBlock {

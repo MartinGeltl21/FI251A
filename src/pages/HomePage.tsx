@@ -64,6 +64,18 @@ export default function HomePage() {
                 </p>
             </header>
 
+            <div className="info-banner">
+                <div className="info-banner__icon">
+                    <Megaphone size={24} />
+                </div>
+                <div className="info-banner__content">
+                    <h3 className="info-banner__title">Wichtige Info</h3>
+                    <p className="info-banner__desc">
+                        Am ersten Mittwoch im nächsten Turnus (<b>29.04.2026</b>) schreiben wir eine LK in WL!
+                    </p>
+                </div>
+            </div>
+
             <div className="nav-cards-grid">
                 {navCards.map((card, index) => (
                     <button

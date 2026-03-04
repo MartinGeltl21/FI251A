@@ -217,6 +217,58 @@ body::after {
   letter-spacing: 0.02em;
 }
 
+/* ─── Info Banner ─── */
+.info-banner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: linear-gradient(135deg, rgba(255, 165, 80, 0.15) 0%, rgba(255, 165, 80, 0.05) 100%);
+  border: 1px solid rgba(255, 165, 80, 0.3);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: fade-down 0.8s cubic-bezier(.22, 1, .36, 1) 0.2s both;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.info-banner__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 165, 80, 0.2);
+  border-radius: 12px;
+  color: #ffa550;
+  flex-shrink: 0;
+}
+
+.info-banner__content {
+  flex: 1;
+}
+
+.info-banner__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffa550;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.info-banner__desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+}
+
+.info-banner__desc b {
+  color: #fff;
+  font-weight: 600;
+}
+
 /* ─── Eyebrow badge (shared) ─── */
 .header-eyebrow {
   display: inline-flex;
