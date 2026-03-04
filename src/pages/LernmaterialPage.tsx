@@ -75,9 +75,10 @@ const lernItems: LernItem[] = [
         icon: Briefcase,
         title: 'Wirtschaftslehre',
         description: 'WL – Wirtschaft, Recht & betriebliche Zusammenhänge',
-        href: '#',
+        href: '/wl',
         accent: '255, 100, 130',
-        available: false,
+        available: true,
+        internal: true,
     },
     {
         icon: Landmark,

@@ -72,6 +72,24 @@ export default function HomePage() {
                     <h3 className="info-banner__title">Wichtige Info</h3>
                     <p className="info-banner__desc">
                         Am ersten Mittwoch im nächsten Turnus (<b>29.04.2026</b>) schreiben wir eine LK in WL!
+                        <br />
+                        <span
+                            onClick={() => navigate('/wl#exakte-fragen')}
+                            style={{
+                                cursor: 'pointer',
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '0.4rem',
+                                marginTop: '0.6rem',
+                                color: '#ffa550',
+                                borderBottom: '1px solid rgba(255, 165, 80, 0.4)',
+                                paddingBottom: '0.1rem',
+                                fontWeight: '600',
+                                fontSize: '0.9rem'
+                            }}
+                        >
+                            Exakte Fragen ansehen <span style={{ fontSize: '1.1rem' }}>→</span>
+                        </span>
                     </p>
                 </div>
             </div>
